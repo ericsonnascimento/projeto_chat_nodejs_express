@@ -22,7 +22,16 @@
     "skipLibCheck": true,
     
     // Força nomes de arquivos com casing consistente em imports
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    // Habilita suporte experimental ao ES7 decoradores
+    "experimentalDecorators": true,
+
+    // Habilita suporte experimental ao tipo emissor de decoradores
+    "emitDecoratorMetadata": true,
+
+    // Desativa a exigência de inicializar propriedades no construtor. Necessário porque o TypeORM injeta valores via decorators e não pelo construtor, evitando erros como "Property has no initializer".
+    "strictPropertyInitialization": false
   },
 
   // INCLUDE: Especifica quais pastas/arquivos o TypeScript deve compilar
