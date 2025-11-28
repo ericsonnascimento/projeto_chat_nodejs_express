@@ -18,6 +18,14 @@ class Setting {
 
     @CreateDateColumn() //decorador voltado a atualizar timestamp de criação de objeto
     created_at: Date;
+
+    //o construtor servirá para verificar se o ID está preenchido: caso esteja: não faça nada. Caso não esteja: preencha com o uuid
+    //o objetivo é: caso estivermos trabalhando com atualização de dados o ID já virá preenchido. 
+    constructor() {
+        if(!this.id) {
+            this.id = uuid();
+        }
+    }
 }
 
 export { Setting } //exporta essa classe a todo o projeto

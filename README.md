@@ -33,3 +33,7 @@
 * Typescript  
 * ORM - TypeORM  
 * SQlite  
+
+## Startar aplicação
+
+`npm run dev`
